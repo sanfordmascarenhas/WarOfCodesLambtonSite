@@ -1,23 +1,25 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from flask_mysqldb import MySQL
-import MySQLdb.cursors
-import re
-
+# from flask_mysqldb import MySQL
+# import MySQLdb.cursors
+# import re
+# #import _mysql
+	
+# import mysql.connector
 app = Flask(__name__)
 
-# Change this to your secret key (can be anything, it's for extra protection)
-# TODO: Add key here for later.
-app.secret_key = ''
+# # Change this to your secret key (can be anything, it's for extra protection)
+# # TODO: Add key here for later.
+# app.secret_key = ''
 
-# Enter your database connection details below. Will be specific per system. 
-# Sync this across development systems.
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'password'
-app.config['MYSQL_DB'] = 'pythonlogin'
+# # Enter your database connection details below. Will be specific per system. 
+# # Sync this across development systems.
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DB'] = 'pythonlogin'
 
-# Intialize MySQL
-mysql = MySQL(app)
+# # Intialize MySQL
+# mysql = MySQL(app)
 
 # http://localhost:5000/pythonlogin/ - the following will be our login page, which will use both GET and POST requests
 @app.route('/socials/', methods=['GET', 'POST'])
