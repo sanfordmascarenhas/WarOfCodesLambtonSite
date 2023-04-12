@@ -10,10 +10,16 @@ pip install Flask Flask-MySQLdb
 Create a MySQL database called "pythonlogin" and a table called "accounts". The "accounts" table should have three columns: "id", "username", and "password".
 
 
-![](Screenshots/Initial_db.png){:height="10px" width="10px"}.
-
+![](Screenshots/Initial_db.png)
 
 
 3. Set up the Flask Application
 Create a new Python file and import the necessary modules. Then create a Flask application and set its secret key
 
+In Flask, the secret key is used to secure cookies and the session information. When a user logs in, a session is created on the server-side and a cookie with a session ID is sent to the user's browser. The secret key is used to sign the session cookie to prevent tampering by an attacker.
+
+If an attacker manages to modify the session cookie, they could potentially gain access to the user's session, allowing them to perform actions on behalf of the user. By using a secret key to sign the cookie, Flask ensures that the cookie can't be tampered with, and the user's session remains secure.
+
+Additionally, the secret key is also used for other security-related features in Flask, such as securely storing user passwords or generating random tokens.
+
+![](Screenshots/Session_key.png)
