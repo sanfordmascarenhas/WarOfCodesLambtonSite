@@ -9,9 +9,9 @@ pip install Flask Flask-MySQLdb
 2. Set up the Database (inital database)
 Create a MySQL database called "pythonlogin" and a table called "accounts". The "accounts" table should have three columns: "id", "username", and "password".
 
-<div style="width:100px ; height:60px">
-![](Screenshots/Initial_db.png)
-<div>
+
+![](Screenshots/Initial_db.png){:height="100px" width="100px"}.
+
 
 
 3. Set up the Flask Application
