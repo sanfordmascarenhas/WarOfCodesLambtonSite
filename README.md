@@ -23,3 +23,9 @@ If an attacker manages to modify the session cookie, they could potentially gain
 Additionally, the secret key is also used for other security-related features in Flask, such as securely storing user passwords or generating random tokens.
 
 ![](Screenshots/Session_key.png)
+
+4. Create the Login Route
+
+Define a route for the login page, which will handle both GET and POST requests. In the POST request handler, check if the "username" and "password" fields exist in the submitted form. Then, query the database to check if the user exists and the password is correct. If so, set session data to indicate that the user is logged in and redirect to the home page. If not, display an error message.
+
+![](Screenshots/Login_pg.png)
